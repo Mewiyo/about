@@ -1,0 +1,126 @@
+
+body {
+    background-color: black;
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: clamp(2rem, 10vw, 150px);
+    font-weight:900;
+}
+
+p {
+    font-size: clamp(2rem, 10vw, 130px);
+    font-weight: bold;
+}
+
+.header{
+    height: 100vh;
+    align-content: center;
+    margin: 50px;
+}
+
+.content {
+    margin: 50px;
+    height: 100vh;
+    align-content: center;
+}
+
+.highlight {
+    color: white;
+}
+
+@media (max-width: 800px) {
+    .highlight {
+        background: linear-gradient(to right, #0077B5, white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+::selection {
+    background-color: white;
+    color: rgb(0, 8, 92);
+}
+
+.logo-container {
+    position: -webkit-sticky; /* Für Safari */
+    position: sticky;
+    top: 0;
+    left: 0;
+    padding: 20px; /* Optional: Abstand um das Logo */
+    z-index: 1000; /* Stellt sicher, dass das Logo über anderem Inhalt bleibt */
+    margin-left: 40px;
+}
+
+.logo {
+    width: 50px; /* Passe die Größe des Logos an */
+    height: auto; /* Beibehaltung des Seitenverhältnisses */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+a.hover-figma:hover {
+    background: linear-gradient(to right, #F24E1F, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+a.hover-linkedin:hover {
+    background: linear-gradient(to right, #0077B5, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+a.hover-github:hover {
+    background: linear-gradient(to right, #00005e, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+a.hover-mailto:hover {
+    background: linear-gradient(to right, #ffea00, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.no-select {
+    user-select: none; /* Standardkonforme Browser */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+@keyframes wobble {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(1deg);
+    }
+    50% {
+        transform: rotate(-1deg);
+    }
+    75% {
+        transform: rotate(1deg);
+    }
+}
+
+.highlight-wobble {
+    color: white;
+    display: inline-block; /* Damit die Transformationen korrekt angewendet werden */
+    animation: wobble 3s ease-in-out infinite;
+}
+
+@media (max-width: 800px) {
+    .highlight-wobble {
+        background: linear-gradient(to right, #0077B5, white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
