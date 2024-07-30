@@ -1,5 +1,6 @@
 
 body {
+    margin: 0px auto;
     background-color: black;
     color: gray;
     font-family: Arial, Helvetica, sans-serif;
@@ -18,13 +19,16 @@ p {
 .header{
     height: 100vh;
     align-content: center;
+    justify-content: center;
     margin: 50px;
+    margin-top: -50px; /* Hier kannst du den gewünschten Abstand anpassen */
 }
 
 .content {
     margin: 50px;
     height: 100vh;
     align-content: center;
+    justify-content: center;
 }
 
 .highlight {
@@ -114,7 +118,7 @@ a.hover-mailto:hover {
 .highlight-wobble {
     color: white;
     display: inline-block; /* Damit die Transformationen korrekt angewendet werden */
-    animation: wobble 3s ease-in-out infinite;
+    animation: wobble 5s ease-in-out infinite;
 }
 
 @media (max-width: 800px) {
@@ -123,4 +127,66 @@ a.hover-mailto:hover {
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+}
+
+.sticky-button {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 80px;
+    height: 40px;
+    background-color: transparent;
+    background-image: url('assets/double_arrow.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.sticky-button.contact {
+    width: 60px;
+    height: 60px;
+    padding: 10px 20px;
+    background-image: url('img/LinkedIn.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style-type: none; /* Entfernt die Punkte */
+    padding: 0; /* Entfernt den Standard-Innenabstand */
+    margin: 0; /* Entfernt den Standard-Außenabstand */
+    display: flex; /* Anordnung der Liste nebeneinander */
+}
+
+nav ul li {
+    margin-right: 15px; /* Abstand zwischen den Listenelementen */
+}
+
+.menu-selected {
+    color: white;
+}
+
+.privacy-and-imprint p {
+    color: white;
+    font-size: 16;
+    font-weight: 200;
+    margin-left: 40px;
+}
+
+.privacy-and-imprint h1 {
+    color: white;
+    font-size: 36;
+    font-weight:900;
+    margin-left: 40px;
+}
+
+.privacy-and-imprint h2 {
+    color: white;
+    font-size: 28
+    font-weight: 900;
+    margin-left: 40px;
 }
