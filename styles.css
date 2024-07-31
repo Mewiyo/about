@@ -1,8 +1,9 @@
 
 body {
     margin: 0px auto;
-    background-color: black;
-    color: gray;
+    background: #B0014F;
+    background: radial-gradient(at right bottom, #B0014F, #032340);
+    color: rgb(148, 148, 148);
     font-family: Arial, Helvetica, sans-serif;
 }
 
